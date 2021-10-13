@@ -3,6 +3,10 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+:root {
+  --primary-color: #0e61ad;
+}
+
 @media print {
   body {
     width: 8.5in;
@@ -13,7 +17,7 @@
 
   .sidebar-items {
     padding: 10px;
-    background-color: #0e61ad !important;
+    background-color: var(--primary-color) !important;
     color: #fff !important;
     min-width: 200px;
     -webkit-print-color-adjust: exact !important;
@@ -71,7 +75,7 @@ body {
 
 .sidebar-items {
   padding: 10px;
-  background-color: #0e61ad !important;
+  background-color: var(--primary-color) !important;
   color: #fff;
   min-width: 200px;
   display: flex;
