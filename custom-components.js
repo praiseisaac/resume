@@ -35,7 +35,7 @@ class IconItem extends HTMLElement {
     super();
 
     var img = document.createElement("img");
-    img.src = "/assets/" + icons[this.getAttribute("icon")];
+    img.src = "assets/" + icons[this.getAttribute("icon")];
     img.className = "icon-image";
     img.style.height = "100%";
 
