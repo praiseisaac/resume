@@ -97,7 +97,7 @@ class ExperienctBox extends HTMLElement {
     <link rel="stylesheet" href="style.css">
     <p class="employment-title">${this.getAttribute("header")}</p>
     <p class="employer-name">${this.getAttribute("company")}${
-      date !== "" ? "/ <strong>" + date + "</strong>" : ""
+      date !== "" ? " / <strong>" + date + "</strong>" : ""
     }</p>
     <ul>
       
