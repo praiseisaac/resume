@@ -8,9 +8,8 @@
   <title>Praise Daramola</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
-  <script src="./script.js"></script>
-  <script src="./custom-components.js" type="module"></script>
+  <script src="custom-components.js" type="module"></script>
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -43,6 +42,14 @@
             <div class="item-subtitle">
               <a href="https://www.linkedin.com/in/praise-daramola-2a0803116/">
                 praise-daramola-2a0803116
+              </a>
+            </div>
+          </div>
+          <div class="item-section">
+            <div>GitHub</div>
+            <div class="item-subtitle">
+              <a href="https://github.com/praiseisaac">
+                @praiseisaac
               </a>
             </div>
           </div>
@@ -270,9 +277,14 @@
     </div>
 
   </div>
-  <a href="Praise Daramola.pdf"
-    style="border: none; background-color: var(--primary-color); padding: 10px; color: white; text-decoration: none; border-radius: 5px; margin: 10px;">PDF
-    version</a>
+  <div class="buttons">
+
+    <a href="Praise Daramola.pdf"
+      style="border: none; background-color: var(--primary-color); padding: 10px; color: white; text-decoration: none; border-radius: 5px; margin: 10px;">PDF
+      version</a>
+    <button onclick="print()"
+      style="border: none; background-color: var(--primary-color); padding: 10px; color: white; text-decoration: none; border-radius: 5px; margin: 10px;">Print</button>
+  </div>
 </body>
 
 </html>

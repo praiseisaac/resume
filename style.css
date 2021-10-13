@@ -7,22 +7,6 @@
   --primary-color: #0e61ad;
 }
 
-@media print {
-  body {
-    width: 8.5in;
-    height: 11in;
-    margin: none;
-    /* change the margins as you want them to be. */
-  }
-
-  .sidebar-items {
-    padding: 10px;
-    background-color: var(--primary-color) !important;
-    color: #fff !important;
-    min-width: 200px;
-    -webkit-print-color-adjust: exact !important;
-  }
-}
 .main-container {
   height: 11in;
   width: 8.5in;
@@ -161,4 +145,26 @@ a {
 .footer > p {
   display: flex;
   margin: 0px;
+}
+@media print {
+  .main-container {
+    box-shadow: none;
+    border-radius: 0px;
+  }
+
+  body {
+    margin: 0px;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .sidebar-items {
+    padding: 10px;
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    min-width: 200px;
+    -webkit-print-color-adjust: exact !important;
+  }
 }
