@@ -13,7 +13,7 @@
   display: flex;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 1px 0px 12px -1px #000000;
+  /* box-shadow: 1px 0px 12px -1px #000000; */
 }
 
 .header {
@@ -34,7 +34,7 @@ body {
 }
 
 .tab-item {
-  height: 20px;
+  height: 18px;
   display: flex;
   padding: 3px 3px;
   width: max-content;
@@ -43,7 +43,8 @@ body {
   border-radius: 5px;
   background-color: #fff;
   font-size: small;
-  font-size: 13px;
+  font-size: 11px;
+  border: 1px solid #ccc; 
 }
 
 .tab-list {
@@ -59,17 +60,18 @@ body {
 
 .sidebar-items {
   padding: 10px;
-  background-color: var(--primary-color) !important;
-  color: #fff;
+  color: #000;
   min-width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-right: 1px solid #ccc
 }
 
 .section-title {
   text-decoration: underline;
-  color: #fff;
+  color: #000;
+  margin-bottom: 10px;
 }
 
 .more-info {
@@ -124,12 +126,12 @@ h3 {
 
 a:visited,
 a {
-  color: rgb(55, 126, 226);
+  color: #000;
 }
 
 .sidebar-items a:visited,
 .sidebar-items a {
-  color: #fff;
+  color: #000;
 }
 
 .footer {
@@ -140,6 +142,28 @@ a {
   align-self: baseline;
   font-size: 12px;
   width: 100%;
+}
+
+.footer-link {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link img {
+  width: 12px;
+  height: 12px;
+}
+
+.footer-link a {
+  padding: 7px;
+  border-radius: 2.5px;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .footer > p {

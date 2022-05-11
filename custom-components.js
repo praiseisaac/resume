@@ -18,6 +18,7 @@ const icons = {
   postgres: "postgres icon.png",
   python: "python favicon.ico",
   rails: "rails icon.png",
+  ruby: "ruby icon.png",
   reactjs: "reactjs icon.png",
   s3: "s3 icon.png",
   ts: "ts icon.png",
@@ -26,6 +27,8 @@ const icons = {
   html: "html icon.png",
   heart: "heart icon.webp",
   css: "css icon.png",
+  koajs: "koajs icon.png",
+  firebase: "firebase icon.png"
   //   aws icon.png          django icon.png       express icon.png      google cloud icon.png java icon.jpg         kotlin icon.ico       python favicon.ico    reactjs icon.png
   // bash icon.png         dotnet icon.png       github icon.png       heroku icon.ico       js icon.jpg           next icon.png         rails icon.png        ts icon.png
 };
@@ -69,10 +72,10 @@ class ListItem extends HTMLElement {
 
     this.shadowRoot.innerHTML = `<li><div class="list-item">
     <link rel="stylesheet" href="style.css">
-    <div>
+    <span>
       ${this.getAttribute("summary")}
       ${items !== "" ? '<div class="tools-icons">' + items + "</div>" : ""}
-    </div>
+    </span>
 
   </div></li>`;
   }
