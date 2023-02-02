@@ -28,7 +28,8 @@ const icons = {
   heart: "heart icon.webp",
   css: "css icon.png",
   koajs: "koajs icon.png",
-  firebase: "firebase icon.png"
+  firebase: "firebase icon.png",
+  flutter: "flutter icon.png",
   //   aws icon.png          django icon.png       express icon.png      google cloud icon.png java icon.jpg         kotlin icon.ico       python favicon.ico    reactjs icon.png
   // bash icon.png         dotnet icon.png       github icon.png       heroku icon.ico       js icon.jpg           next icon.png         rails icon.png        ts icon.png
 };
