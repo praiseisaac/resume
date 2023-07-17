@@ -34,6 +34,24 @@ const icons = {
   // bash icon.png         dotnet icon.png       github icon.png       heroku icon.ico       js icon.jpg           next icon.png         rails icon.png        ts icon.png
 };
 
+const renderHover = (element, name) => {
+  console.log(element);
+  const title = document.createElement("div");
+  title.style.position = "absolute";
+  title.style.top = "0";
+  title.style.left = "0";
+  title.style.zIndex = "100";
+  title.style.backgroundColor = "white";
+  title.style.height = "25px";
+  title.style.width = "125px";
+  title.innerText = name;
+  console.log(title)
+  element.appendChild(title);
+  element.onmouseleave = () => {
+    element.removeChild(title);
+  }
+}
+
 class IconItem extends HTMLElement {
   constructor() {
     super();
@@ -42,6 +60,8 @@ class IconItem extends HTMLElement {
     img.src = "assets/" + icons[this.getAttribute("icon")];
     img.className = "icon-image";
     img.style.height = "100%";
+    img.style.position = "relative";
+    img.onmouseenter = (e) => renderHover(e.currentTarget, this.getAttribute("name"));
 
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(img);
@@ -58,7 +78,7 @@ class ListItem extends HTMLElement {
 
     var items = "";
 
-    if (!this.hasAttribute("summary") || !this.hasAttribute("stack")) {
+    if (!this.hasAttribute("summary")) {
       this.shadowRoot.innerHTML = `<div></div>`;
       return;
     }
@@ -74,8 +94,8 @@ class ListItem extends HTMLElement {
     this.shadowRoot.innerHTML = `<li><div class="list-item">
     <link rel="stylesheet" href="style.css">
     <span>
-      ${this.getAttribute("summary")}
-      ${items !== "" ? '<div class="tools-icons">' + items + "</div>" : ""}
+     <div> ${this.getAttribute("summary")}</div>
+      ${!items ? "" : ('<div class="tools-icons">' + items + "</div>")}
     </span>
 
   </div></li>`;
@@ -104,7 +124,6 @@ class ExperienctBox extends HTMLElement {
       date !== "" ? " / <strong>" + date + "</strong>" : ""
     }</p>
     <ul>
-      
         ${children}
     </ul>
   </div>`;
